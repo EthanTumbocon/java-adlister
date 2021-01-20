@@ -19,7 +19,9 @@
 <p>The page number is: <%=pageNumber %></p>
 
 <form action="user-profile,jsp" method="get">
+    <label for="username">Username</label>
    <input type="hidden" id="username" name="username" value="bob">
+
     <input type="hidden" id ="lastname"name="lastname" value="Z">
     <button type="submit">Go there.</button>
 </form>
