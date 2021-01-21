@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: ethantumbocon
@@ -12,25 +11,26 @@
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         if (username.equals("admin") && password.equals("password")) {
-            response.sendRedirect("/profile");
+            response.sendRedirect("/profile.jsp");
         }
     }
 %>
 <html>
 <head>
-    <title>Log In!!</title>
+    <%@include file="partials/head.jsp"%>
 </head>
 <body>
+<%@include file="partials/navbar.jsp"%>
 <h1> Log In!</h1>
 
 <form action="/login.jsp", method="post">
     <label for="username">Username</label>
-    <input type="email" id="username" name="username" value="bob">
+    <input type="text" id="username" name="username" placeholder="Username">
     <label for="password">Password</label>
-    <input type="password" id ="password"name="password" value="123!">
+    <input type="password" id ="password"name="password" placeholder="password">
     <button type="submit">Submit</button>
 
-
+<%@include file="partials/footer.jsp"%>
 </form>
 </body>
 </html>
