@@ -11,7 +11,10 @@
     <title>Title</title>
 </head>
 <body>
+<form action="/guess" method="post">
+    <label for="number">Guess a number between 1 and 3:</label>
 
+</form>
 
 </body>
 </html>

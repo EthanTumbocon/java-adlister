@@ -16,11 +16,12 @@ public class PizzaServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String crustType = req.getParameter("crust");
         String[] toppings = req.getParameterValues("topping");
-        String adress  req.getParameter("address");
+        String address = req.getParameter("address");
         System.out.println("Your crust type:" + crustType);
         for(int i= 0; i < toppings.length; i++) {
 
             System.out.println(toppings[i]);
         }
+        System.out.println(address);
     }
 }
